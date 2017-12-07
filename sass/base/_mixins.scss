@@ -1,0 +1,13 @@
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Mixins will be provided here
+*/
+
+@mixin clearfix {
+    &::after{
+        content:""; //Without the content ppty, a pseudo-element will not appear on the page.
+        display: table; // Standard version of the clearfix
+        clear:both;
+    }
+}//end:clearfix

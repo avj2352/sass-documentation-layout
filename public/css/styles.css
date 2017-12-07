@@ -1,0 +1,140 @@
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Base SCSS will be provided here
+*/
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Variables will be provided here
+*/
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Mixins will be provided here
+*/
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Animation related CSS will be provided here
+*/
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Fonts and Typography will be provided here
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Code+Pro");
+@import url("https://fonts.googleapis.com/css?family=Cabin|Roboto+Condensed|Source+Code+Pro");
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.links-section {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+.content-section {
+  font-family: 'Cabin', sans-serif; }
+
+.code-section {
+  font-family: 'Source Code Pro', monospace; }
+  .code-section pre {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px; }
+
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Layout SCSS will be provided here
+*/
+.row {
+  max-width: 114rem;
+  height: 100vh;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 1rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 1rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 1rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 1rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc(2*((100% - 2 * 1rem) / 3)); }
+  .row .col-2-of-4 {
+    width: calc(2*((100% - 3 * 1rem) / 4)); }
+  .row .col-3-of-4 {
+    width: calc(3*((100% - 3 * 1rem) / 4) + 2*(1rem)); }
+
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Table SCSS will be provided here
+*/
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Documentation page specific css will be provided here
+*/
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+  body div.links-section {
+    border: 1px solid #313131;
+    position: static;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #313131;
+    color: #fff;
+    padding: 5px 10px 5px; }
+    body div.links-section.col-1-of-4:not(:last-child) {
+      margin-right: 0; }
+    body div.links-section header {
+      border-bottom: 1px solid white;
+      text-align: center; }
+      body div.links-section header img {
+        width: 10%;
+        position: relative;
+        top: 10px;
+        display: inline-block;
+        margin: 0 5px;
+        height: auto; }
+      body div.links-section header h1, body div.links-section header h2, body div.links-section header h3 {
+        display: inline-block; }
+        body div.links-section header h1 span, body div.links-section header h2 span, body div.links-section header h3 span {
+          display: inline-block;
+          font-size: 0.7em;
+          margin: 0 3px; }
+    body div.links-section aside {
+      height: 84vh;
+      overflow-y: scroll; }
+      body div.links-section aside::-webkit-scrollbar {
+        display: none; }
+      body div.links-section aside ul {
+        padding: 3%; }
+        body div.links-section aside ul li {
+          margin: 5px 0 0; }
+          body div.links-section aside ul li:not(:nth-child(1)) {
+            margin: 25px 0 0; }
+          body div.links-section aside ul li ul li {
+            margin: 5px 0 0; }
+            body div.links-section aside ul li ul li:not(:nth-child(1)) {
+              margin: 25px 0 0; }
+          body div.links-section aside ul li a {
+            color: #fff;
+            text-decoration: none; }
+  body .content-section {
+    background-color: #fff;
+    padding-left: 10px; }
+  body .code-section pre {
+    overflow-x: scroll;
+    margin: 0; }

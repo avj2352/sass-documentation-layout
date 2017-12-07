@@ -1,0 +1,96 @@
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Documentation page specific css will be provided here
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    div.links-section {
+        border: 1px solid $link-section-background-color;
+        position: static;
+        overflow: hidden;
+        height: 100vh;
+        background-color: $link-section-background-color;
+        color: $color-white;
+        padding: 5px 10px 5px;
+        // Remove the standard Grid's margin right value for this section
+        &.col-1-of-4 {
+            &:not(:last-child){
+                margin-right: 0;
+            }            
+        }//end:col-1-04
+        // Header section - containing Logo and Page Title
+        header {
+            border-bottom:  1px solid white;
+            text-align: center;
+            img{
+                width: 10%;
+                position: relative;
+                top:10px;
+                display: inline-block;
+                margin: 0 5px;
+                height: auto;
+            }
+    
+            h1,h2,h3 {
+                display: inline-block;
+                span {
+                    display: inline-block;
+                    font-size: 0.7em;
+                    margin: 0 3px;
+                }
+            }
+        }//end:header
+        // Links Section
+        aside {
+            height: 84vh;
+            overflow-y: scroll;
+            &::-webkit-scrollbar { 
+                display: none; 
+            }
+            ul {
+                padding: 3%;
+                li {
+                    //Making all child li elements' margin as 5px top
+                    margin: 5px 0 0;                                
+                    // Now this will apply to all child li element except the first child li element
+                    &:not(:nth-child(1)){
+                        margin: 25px 0 0;
+                    }
+                        ul {
+                            li {
+                                //Making all child li elements' margin as 5px top
+                                margin: 5px 0 0;                                
+                                // Now this will apply to all child li element except the first child li element
+                                &:not(:nth-child(1)){
+                                    margin: 25px 0 0;
+                                }
+                            }
+                        }
+                    a {
+                        color: $color-white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+    }//end:links-section
+
+    .content-section {
+        background-color: $color-white;
+        padding-left: 10px;
+    }//end:content-section
+    
+    .code-section {
+        pre{
+            overflow-x: scroll;
+            margin: 0;
+        }
+    }//end:code-section
+}//end:body
+

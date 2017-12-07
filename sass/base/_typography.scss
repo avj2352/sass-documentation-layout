@@ -1,0 +1,36 @@
+/*
+* author: Pramod AJ
+* date: 6th Dec 2017
+* description: Fonts and Typography will be provided here
+*/
+
+// Links Section fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+// Code Section fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Code+Pro');
+
+// Central Section fonts
+@import url('https://fonts.googleapis.com/css?family=Cabin|Roboto+Condensed|Source+Code+Pro');
+
+//Fonts to be used
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.links-section {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.content-section {
+    font-family: 'Cabin', sans-serif;
+}
+
+.code-section {
+    pre{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 15px;
+    }
+    font-family: 'Source Code Pro', monospace;
+}
