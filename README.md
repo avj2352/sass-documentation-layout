@@ -2,6 +2,10 @@
 
 ## Author: Pramod
 
+# Important Links
+- [Woocommerce REST API Documentation link - Reference Website](http://woocommerce.github.io/woocommerce-rest-api-docs/#requirements)
+
+
 # Libraries
 - `http-server`: Simple Static Server to host files
 - `node-sass`: SASS to CSS converter
