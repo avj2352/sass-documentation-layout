@@ -25,12 +25,48 @@ h1,h2,h3,h4,h5 {
 
 .content-section {
     font-family: 'Cabin', sans-serif;
-}
+
+    .simple-notes{        
+        h1 {
+            text-transform: uppercase;            
+        }//end: h-tag
+
+        p {
+            color: $dark-grey-font-color;
+            letter-spacing: 2px;
+
+            span.highlight { 
+                color: $font-highlight-color;
+                font-style: italic;
+            }
+        }//end: p tag
+
+        a {
+            &.code-snippet-pointer {                                
+                font-family: 'Roboto Condensed', sans-serif;
+                text-transform: uppercase;                
+                text-decoration: none;
+                color: white;
+            }//end:.code-snippet-pointer
+        }
+
+    }//end:simple-notes
+
+}//end:content-section
 
 .code-section {
-    pre{
+    .code-snippet-section{
         font-family: 'Source Code Pro', monospace;
-        font-size: 15px;
-    }
-    font-family: 'Source Code Pro', monospace;
-}
+        h1 {
+            display: block;
+            margin-bottom: 1px solid $button-grey;
+            font-family: 'Roboto Condensed', sans-serif;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        pre {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 15px;
+        }
+    }//end:code-snippet-section    
+}//end:code-section

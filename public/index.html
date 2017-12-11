@@ -10,6 +10,7 @@
 <body>
     <div class="page">
         <div class="row">
+            <!-- Links Section -->
             <!-- All Links related to PhilipsRTCAPI Topics come here -->
             <div class="col-1-of-4 links-section">
                 <header>
@@ -19,9 +20,9 @@
                 <!-- All Document Links / Topics will come here -->
                 <aside>
                     <ul>
-                        <li><a href="#">Introduction</a></li>
-                        <li><a href="#">Creating Build</a></li>
-                        <li><a href="#">Running Build</a></li>
+                        <li><a href="#introduction-content">Introduction</a></li>
+                        <li><a href="#build-section">Creating Build</a></li>
+                        <li><a href="#live-debugging">Live Debugging</a></li>
                         <li><a href="#">Basic Conference with Philips Tele-Health client application</a></li>
                         <li><a href="#">FrozenMountain Icelink/Websync </a>
                             <ul>
@@ -43,21 +44,92 @@
                         </li>                        
                     </ul>
                 </aside><!-- end:All Document Links / Topics  -->
-            </div>
+            </div><!-- Links Section ends here -->
 
-            <!-- All Content come here -->
+            <!-- All Content comes here -->
+            <!-- 1st section -->
             <div class="col-2-of-4 content-section">
-                Content Column
-            </div><!-- end:Content -->
+                <!-- This section will repeat based on the link section topics-->
+                <!-- Intro Section -->
+                <a id="introduction-content"></a>
+                <section class="simple-notes">
+                    <h1>Introduction</h1>
+                    <p>
+                        Below are a collection of examples for the Philips RTC Client API.                         
+                    </p>
+                    <p>
+                        Each example has an implementation which requires two endpoints to be active. Please open these links in two separate tabs or two browser windows or in browsers on two PCs. 
+                    </p>
+                    <p><span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the latest version).</p>
+                    <!-- Code Section pointer -->
+                    <!-- <a href="#" class="code-snippet-pointer">Refer Code Snippet 1.0</a> -->
+                </section>
+                <!-- Intro Section comes here-->
+                
+                <!-- 2nd Section  -->
+                <!-- Creating Build section -->
+                <a id="build-section"></a>
+                <section class="simple-notes">
+                    <h1>Creating Build</h1>
+                    <p><strong>Pre-requisite</strong></p>
+                    <p>
+                        To just create/compile the build
+                    </p>
+                    <p>
+                        Build Script are split into 2 scripts:
+                    </p>
+                    <p>
+                        <ul>
+                            <li>Creating Webpack Build: </li>
+                            <li>Creating: Vendor Build: </li>
+                        </ul>
+                    </p>
+                    <p><span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the latest version).</p>
+                    <a href="#code-snippet-pointer" class="code-snippet-pointer">npm commands (code 1.0)</a>
+                    </section>
+                <!-- Creating Build section ends here-->
+
+                <!-- Creating Build section -->
+                <section class="simple-notes">
+                        <h1>Live Debugging</h1>
+                        <p>
+                            You cant test your unit test scripts in live mode using this commands:
+                        </p>
+                        <p>
+                                <ul>
+                                    <li><em>npm run test</em>: this will trigger karma start </li>
+                                    <li><em>karma start</em>: Or you can directly run the karma command </li>
+                                </ul>
+                            </p>
+                        <p>                            
+                        </p>
+                        <a href="#unit-testing-link" class="code-snippet-pointer">Unit test commands (code 1.1)</a>
+                    </section>
+                <!-- Creating Build section ends here-->                
+                        
+            </div><!-- end:Content section -->
 
             <!-- All Code comes here -->
-            <div class="col-1-of-4 code-section">
-                <pre>
-for(i=0; i<10; i++){
-    console.log('Simple code');
-}
-                </pre>
-
+            <div class="col-1-of-4 code-section">                
+                <!-- Code snippet section 1.0-->
+                <a id="code-snippet-pointer"></a>
+                <section class="code-snippet-section">
+                    <h1>npm commands (code 1.0)</h1>
+                    <pre>
+npm start
+npm run compile
+npm run build-fm
+                    </pre>
+                </section>
+                <!-- Unit testing code snippet section 1.1 -->
+                <a id="unit-testing-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Unit testing npm command (Code 1.1)</h1>
+                    <pre>
+npm test
+karma
+                    </pre>
+                </section>                
             </div><!--end:All Code comes here -->            
         </div><!-- end:row -->
     </div><!-- end:page -->

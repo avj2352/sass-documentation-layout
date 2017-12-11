@@ -34,10 +34,29 @@ h1, h2, h3, h4, h5 {
 
 .content-section {
   font-family: 'Cabin', sans-serif; }
+  .content-section .simple-notes h1 {
+    text-transform: uppercase; }
+  .content-section .simple-notes p {
+    color: #4c4c4c;
+    letter-spacing: 2px; }
+    .content-section .simple-notes p span.highlight {
+      color: #4040ba;
+      font-style: italic; }
+  .content-section .simple-notes a.code-snippet-pointer {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white; }
 
-.code-section {
+.code-section .code-snippet-section {
   font-family: 'Source Code Pro', monospace; }
-  .code-section pre {
+  .code-section .code-snippet-section h1 {
+    display: block;
+    margin-bottom: 1px solid #777;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 20px; }
+  .code-section .code-snippet-section pre {
     font-family: 'Source Code Pro', monospace;
     font-size: 15px; }
 
@@ -133,8 +152,34 @@ body {
             color: #fff;
             text-decoration: none; }
   body .content-section {
+    position: relative;
     background-color: #fff;
-    padding-left: 10px; }
-  body .code-section pre {
-    overflow-x: scroll;
-    margin: 0; }
+    padding-left: 10px;
+    overflow-y: scroll;
+    height: 100vh; }
+    body .content-section::-webkit-scrollbar {
+      display: none; }
+    body .content-section .simple-notes {
+      position: relative;
+      display: block;
+      margin-top: 40px; }
+      body .content-section .simple-notes h1 {
+        display: block;
+        border-bottom: 1px solid #4c4c4c; }
+      body .content-section .simple-notes a.code-snippet-pointer {
+        display: inline-block;
+        position: relative;
+        top: 2vh;
+        left: 30vh;
+        text-align: right;
+        margin: 0 10px 0 0;
+        padding: 10px;
+        background-color: #777; }
+  body .code-section {
+    position: relative;
+    overflow-y: scroll;
+    height: 100vh; }
+    body .code-section::-webkit-scrollbar {
+      display: none; }
+    body .code-section .code-snippet-section {
+      margin: 150px 0; }

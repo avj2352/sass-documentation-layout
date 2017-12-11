@@ -81,15 +81,56 @@ body {
 
     }//end:links-section
 
+    // NOTE: Content-Section comes here 
     .content-section {
+        position: relative;
         background-color: $color-white;
-        padding-left: 10px;
+        padding-left: 10px;        
+        overflow-y: scroll;
+        height: 100vh;
+
+        // Psudo-class to hide the scrollbar - only on CHROME
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+        .simple-notes {
+            position: relative;
+            display: block;
+            margin-top: 40px;
+            h1 {
+                display: block;
+                border-bottom: 1px solid $dark-grey-font-color;
+            }
+
+            a {
+                &.code-snippet-pointer {   
+                    display: inline-block;                    
+                    // border: 1px solid saddlebrown;             
+                    position: relative;
+                    top:2vh; // This will move the entire box from top
+                    left:30vh; //This will move the entire box to left
+                    text-align: right;                                    
+                    margin: 0 10px 0 0;
+                    padding: 10px;
+                    background-color: $light-button-grey;                
+                }//end:.code-snippet-pointer
+            }
+        }            
     }//end:content-section
     
+    //NOTE: Code-Section comes here
     .code-section {
-        pre{
-            overflow-x: scroll;
-            margin: 0;
+        position: relative;
+        overflow-y: scroll;
+        height: 100vh;
+
+        // Psudo-class to hide the scrollbar - only on CHROME
+        &::-webkit-scrollbar { 
+            display: none; 
+        }
+
+        .code-snippet-section {
+            margin: 150px 0;
         }
     }//end:code-section
 }//end:body
