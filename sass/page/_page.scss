@@ -15,6 +15,7 @@ body {
         overflow: hidden;
         height: 100vh;
         background-color: $link-section-background-color;
+        background-image: linear-gradient(to right bottom, $link-section-background-color, $link-section-background-color-dark);
         color: $color-white;
         padding: 5px 10px 5px;
         // Remove the standard Grid's margin right value for this section
@@ -107,12 +108,11 @@ body {
                     display: inline-block;                    
                     // border: 1px solid saddlebrown;             
                     position: relative;
-                    top:2vh; // This will move the entire box from top
-                    left:30vh; //This will move the entire box to left
+                    top:2vh; // This will move the entire box from top                    
                     text-align: right;                                    
                     margin: 0 10px 0 0;
                     padding: 10px;
-                    background-color: $light-button-grey;                
+                    background-color: $button-blue;                
                 }//end:.code-snippet-pointer
             }
         }            
@@ -122,8 +122,7 @@ body {
     .code-section {
         position: relative;
         overflow-y: scroll;
-        height: 100vh;
-
+        height: 100vh;        
         // Psudo-class to hide the scrollbar - only on CHROME
         &::-webkit-scrollbar { 
             display: none; 
@@ -131,6 +130,24 @@ body {
 
         .code-snippet-section {
             margin: 150px 0;
+            
+            
+            h1 {
+                display: block;
+                border-bottom: 1px solid $dark-grey-font-color;
+            }
+            
+            pre {
+                display: block;                                
+                padding: 5px;
+                // border: 1px solid orangered;
+                width: 100%;
+                overflow-x: scroll;
+                code {
+                    display: inline-block;
+                    padding: 5px;
+                }
+            }
         }
     }//end:code-section
 }//end:body

@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Philips RT SDK Documentation</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">                
 </head>
+
 <body>
     <div class="page">
         <div class="row">
@@ -14,37 +16,69 @@
             <!-- All Links related to PhilipsRTCAPI Topics come here -->
             <div class="col-1-of-4 links-section">
                 <header>
-                        <img class="philips-logo" src="https://healthrtc.net/th/portal/assets/images/philips_logo.svg" alt="">
-                        <h2>Philips RTC SDK API <span>(v0.1.8)</span></h2>
+                    <img class="philips-logo" src="https://healthrtc.net/th/portal/assets/images/philips_logo.svg" alt="">
+                    <h2>Philips RTC SDK API
+                        <span>(v0.1.8)</span>
+                    </h2>
                 </header>
                 <!-- All Document Links / Topics will come here -->
                 <aside>
                     <ul>
-                        <li><a href="#introduction-content">Introduction</a></li>
-                        <li><a href="#build-section">Creating Build</a></li>
-                        <li><a href="#live-debugging">Live Debugging</a></li>
-                        <li><a href="#">Basic Conference with Philips Tele-Health client application</a></li>
-                        <li><a href="#">FrozenMountain Icelink/Websync </a>
+                        <li>
+                            <a href="#introduction-content">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="#build-section" onclick="location.href = '#code-snippet-pointer'">Creating Build</a>
+                        </li>
+                        <li>
+                            <a href="#live-debugging" onclick="location.href = '#unit-testing-link'">Live Debugging</a>
+                        </li>
+                        <li>
+                            <a href="#">Basic Conference with Philips Tele-Health client application</a>
+                        </li>
+                        <li>
+                            <a href="#forzen-mountain" >FrozenMountain Icelink/Websync </a>
                             <ul>
-                                <li><a href="#">Basic conference (Philips)</a></li>
-                                <li><a href="#">Basic conference (Twilio)</a></li>
-                                <li><a href="#">Basic conference with chat</a></li>
-                                <li><a href="#">Conference presence tracker</a></li>
-                                <li><a href="#">Presence tracker and direct calling</a></li>
-                                <li><a href="#"><em>Custom bound records</em> - such as display names or user roles</a></li>
-                                <li><a href="#">Device selection</a></li>
+                                <li>
+                                    <a href="#philips-conference" onclick="location.href = '#philips-conference-link'">Basic conference (Philips)</a>
+                                </li>
+                                <li>
+                                    <a href="#twilio-conference" onclick="location.href = '#twilio-conference-link'">Basic conference (Twilio)</a>
+                                </li>
+                                <li>
+                                    <a href="#chat-conference" onclick="location.href = '#chat-conference-link'">Basic conference with chat</a>
+                                </li>
+                                <li>
+                                    <a href="#presence-tracker" onclick="location.href = '#presence-tracker-link'">Conference presence tracker</a>
+                                </li>
+                                <li>
+                                    <a href="#direct-call" onclick="location.href = '#direct-call-link'">Presence tracker and direct calling</a>
+                                </li>
+                                <li>
+                                    <a href="#bound-record" onclick="location.href = '#bound-record-link'">
+                                        <em>Custom bound records</em> - such as display names or user roles</a>
+                                </li>
+                                <li>
+                                    <a href="#device-selection" onclick="location.href = '#device-selection-link'">Device selection</a>
+                                </li>
                             </ul>
                         </li>
-                        <li><a href="#">Vidyo.io </a>
+                        <li>
+                            <a href="#">Vidyo.io </a>
                             <ul>
-                                <li><a href="#">Basic conference (Vidyo.io)</a></li>
-                                <li><a href="#">Device Selection</a></li>                                
-                                <li><a href="#">Device Selection</a></li>                                
+                                <li>
+                                    <a href="#basic-conference-vidyo" onclick="location.href = '#basic-conference-vidyo-link'">Basic conference (Vidyo.io)</a>
+                                </li>
+                                <li>
+                                    <a href="#device-selection-vidyo" onclick="location.href = '#device-selection-vidyo-link'">Device Selection</a>
+                                </li>
                             </ul>
-                        </li>                        
+                        </li>
                     </ul>
-                </aside><!-- end:All Document Links / Topics  -->
-            </div><!-- Links Section ends here -->
+                </aside>
+                <!-- end:All Document Links / Topics  -->
+            </div>
+            <!-- Links Section ends here -->
 
             <!-- All Content comes here -->
             <!-- 1st section -->
@@ -55,23 +89,28 @@
                 <section class="simple-notes">
                     <h1>Introduction</h1>
                     <p>
-                        Below are a collection of examples for the Philips RTC Client API.                         
+                        Below are a collection of examples for the Philips RTC Client API.
                     </p>
                     <p>
-                        Each example has an implementation which requires two endpoints to be active. Please open these links in two separate tabs or two browser windows or in browsers on two PCs. 
+                        Each example has an implementation which requires two endpoints to be active. Please open these links in two separate tabs
+                        or two browser windows or in browsers on two PCs.
                     </p>
-                    <p><span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the latest version).</p>
+                    <p>
+                        <span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the
+                        latest version).</p>
                     <!-- Code Section pointer -->
                     <!-- <a href="#" class="code-snippet-pointer">Refer Code Snippet 1.0</a> -->
                 </section>
                 <!-- Intro Section comes here-->
-                
+
                 <!-- 2nd Section  -->
                 <!-- Creating Build section -->
                 <a id="build-section"></a>
                 <section class="simple-notes">
                     <h1>Creating Build</h1>
-                    <p><strong>Pre-requisite</strong></p>
+                    <p>
+                        <strong>Pre-requisite</strong>
+                    </p>
                     <p>
                         To just create/compile the build
                     </p>
@@ -84,41 +123,271 @@
                             <li>Creating: Vendor Build: </li>
                         </ul>
                     </p>
-                    <p><span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the latest version).</p>
-                    <a href="#code-snippet-pointer" class="code-snippet-pointer">npm commands (code 1.0)</a>
-                    </section>
+                    <p>
+                        <span class="highlight">Chrome, Firefox and Opera</span> are supported in this moment (please, update your browser to the
+                        latest version).</p>
+                    <p class="align-right">
+                        <a href="#code-snippet-pointer" class="code-snippet-pointer">npm commands (code 1.0)</a>
+                    </p>
+                </section>
                 <!-- Creating Build section ends here-->
 
                 <!-- Creating Build section -->
+                <a id="live-debugging"></a>
                 <section class="simple-notes">
-                        <h1>Live Debugging</h1>
-                        <p>
-                            You cant test your unit test scripts in live mode using this commands:
-                        </p>
-                        <p>
-                                <ul>
-                                    <li><em>npm run test</em>: this will trigger karma start </li>
-                                    <li><em>karma start</em>: Or you can directly run the karma command </li>
-                                </ul>
-                            </p>
-                        <p>                            
-                        </p>
+                    <h1>Live Debugging</h1>
+                    <p>
+                        You cant test your unit test scripts in live mode using this commands:
+                    </p>
+                    <p>
+                        <ul>
+                            <li>
+                                <em>npm run test</em>: this will trigger karma start </li>
+                            <li>
+                                <em>karma start</em>: Or you can directly run the karma command </li>
+                        </ul>
+                    </p>
+                    <p>
+                    </p>
+                    <p class="align-right">
                         <a href="#unit-testing-link" class="code-snippet-pointer">Unit test commands (code 1.1)</a>
-                    </section>
-                <!-- Creating Build section ends here-->                
-                        
-            </div><!-- end:Content section -->
+                    </p>
+                </section>
+                <!-- Creating Build section ends here-->
+
+                <!-- forzen-mountain section starts here -->
+                <a id="forzen-mountain"></a>
+                <section class="simple-notes">
+                    <h1>Frozen Mountain - Icelink/Websync</h1>
+                    <p>
+                        Please, enter here
+                        <span class="highlight">ConferenceId</span> that you want to use with the examples:
+                        <input id="conferenceId" value="default" type="text" onchange="updateLinks()">.
+                    </p>
+                    <p>
+                        Clients sharing same ConferenceId will be connected to the same conference call.
+                    </p>
+                    <p>
+                        Please, paste here
+                        <span class="highlight">token</span> that you've got from support team:
+                        <textarea rows="5" cols="50" id="token" onchange="updateLinks()">eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwic2FsdCI6IjNlOWE3YjNiLWU1NzAtNGFhYi05OTc4LWYyYTdlMWNlZDg3NCIsInppcCI6IkRFRiJ9..Py9zgdziWEyH1iq1E_Qp9Q.MhE5kwmZjCpEpVNNaiGHBtzJwfdhZjY_23uhJZfxa9h0hXJ-6yDneTqfTe-mPhSH52QM5H8EhqVZPk44y2J1JHGm5G6NFICb12-cUp6sN-I.RcEZCnm_GP19JebQPqQpug</textarea>
+                    </p>
+                </section>
+                <!-- forzen-mountain section ends here -->
+
+                <!-- Creating basic conference section - philips -->
+                <a id="philips-conference"></a>
+                <section class="simple-notes">
+                    <h1>Basic conference - Philips</h1>
+
+                    <a id="participant" target="_blank">
+                        <span class="highlight"> First Participant</span>
+                    </a>
+                    <p></p>
+                    <a id="second_participant" target="_blank">
+                        <span class="highlight"> Second Participant </span>
+                    </a>
+                    <p>
+                        Simple implementation of the API where two participants immediately connect to a conference. Using Philips as the provider
+                        (i.e. one WebRTC STUN/TURN instance hosted by Philips on AWS in Ireland, not scaled). Point-to-point
+                        connections are supported.
+                    </p>
+                    <p class="align-right">
+                        <a href="#philips-conference-link" class="code-snippet-pointer">Basic Conference (Code 2.1)</a>
+                    </p>
+                </section>
+                <!--Creating basic conference section - philips ends here  -->
+
+                <!-- Creating basic conference section - twilio -->
+                <a id="twilio-conference"></a>
+                <section class="simple-notes">
+                    <h1>Basic conference - Twilio</h1>
+
+                    <a id="participant_twilio" target="_blank">
+                        <span class="highlight"> First Participant </span>
+                    </a>
+                    <p></p>
+                    <a id="second_participant_twilio" target="_blank">
+                        <span class="highlight"> Second Participant </span>
+                    </a>
+                    <p>
+                        Simple implementation of the API where two participants immediately connect to a conference. Using Twilio as the provider
+                        (i.e. world-wide WebRTC STUN/TURN coverage hosted by Twilio). Point-to-point connections are supported.
+                    </p>
+                    <p class="align-right">
+                        <a href="#twilio-conference-link" class="code-snippet-pointer">Twilio Conference (Code 2.2)</a>
+                    </p>
+                </section>
+                <!--Creating basic conference section - twilio ends here  -->
+
+                <!-- Basic chat conference starts here -->
+                <a id="chat-conference"></a>
+                <section class="simple-notes">
+                    <h1>Basic conference with chat</h1>
+
+                    <a id="chat_participant" target="_blank">
+                        <span class="highlight"> First Participant </span>
+                    </a>
+                    <p></p>
+                    <a id="second_chat_participant" target="_blank">
+                        <span class="highlight"> Second Participant </span>
+                    </a>
+                    <p>
+                        Conference that includeds chat functionality.
+                    </p>
+                    <p class="align-right">
+                        <a href="#chat-conference-link" class="code-snippet-pointer">Send Chat Message (Code 2.3)</a>
+                    </p>
+                </section>
+                <!-- Basic chat conference ends here -->
+
+                <!-- Conference presence tracker starts here -->
+                <a id="presence-tracker"></a>
+                <section class="simple-notes">
+                    <h1>Conference presence tracker</h1>
+
+                    <a id="tracking_participant" target="_blank">
+                        <span class="highlight"> Conference tracker </span>
+                    </a>
+                    <p></p>
+                    <a id="tracked_participant" target="_blank">
+                        <span class="highlight"> Patient that has joined the conference </span>
+                    </a>
+                    <p>
+                        Implementation of the conference presence tracker: tracks users that join or leave a conference.
+                    </p>
+                    <p class="align-right">
+                        <a href="#presence-tracker-link" class="code-snippet-pointer">Conference Presence Tracker (Code 2.4)</a>
+                    </p>
+                </section>
+                <!-- Conference presence tracker ends here -->
+
+                <!-- Direct call starts here -->
+                <a id="direct-call"></a>
+                <section class="simple-notes">
+                    <h1>Caregiver with patient presence tracker and direct calling</h1>
+
+                    <a id="caregiver" target="_blank">
+                        <span class="highlight"> Caregiver </span>
+                    </a>
+                    <p></p>
+                    <a id="waitingpatient" target="_blank">
+                        <span class="highlight"> Patient waiting for a call </span>
+                    </a>
+                    <p>
+                        Implementation of the global presence tracker and direct calling. Click the presence tracker to call the patient. Patient
+                        answers automatically.
+                    </p>
+                    <p class="align-right">
+                        <a href="#direct-call-link" class="code-snippet-pointer">Direct Call (Code 2.5)</a>
+                    </p>
+                </section>
+                <!-- Direct call ends here -->
+
+                <!-- Custom bound records starts here -->
+                <a id="bound-record"></a>
+                <section class="simple-notes">
+                    <h1>Test page for custom bound records, such as display names or user roles</h1>
+
+                    <a id="bound_records_participant1" target="_blank">
+                        <span class="highlight"> User with random number as display name </span>
+                    </a>
+                    <p></p>
+                    <a id="bound_records_participant2" target="_blank">
+                        <span class="highlight"> Second user with random number as display name </span>
+                    </a>
+                    <p>
+                        Example usage of onParticipantJoined(), getParticipantList() and the use of bound records.
+                    </p>
+                    <p class="align-right">
+                        <a href="#bound-record-link" class="code-snippet-pointer">Custom Bound Records (Code 2.6)</a>
+                    </p>
+                </section>
+                <!-- Custom bound records ends here -->
+
+                <!-- Device selection starts here -->
+                <a id="device-selection"></a>
+                <section class="simple-notes">
+                    <h1>Test page for device selection</h1>
+
+                    <a id="device1" target="_blank">
+                        <span class="highlight"> User about to join a simple conference </span>
+                    </a>
+                    <p></p>
+                    <a id="device2" target="_blank">
+                        <span class="highlight"> Second user about to join a simple conference </span>
+                    </a>
+                    <p>
+                        Example implementation of device selection. Redirection to conference with selected devices is not yet implemented in this
+                        example.
+                    </p>
+                    <p class="align-right">
+                        <a href="#device-selection-link" class="code-snippet-pointer">Device Selection (Code 2.7)</a>
+                    </p>
+                </section>
+                <!-- Device selection ends here -->
+
+                <!-- Basic Conference vidyo starts here -->
+                <a id="basic-conference-vidyo"></a>
+                <section class="simple-notes">
+                    <h1>Basic conference (Vidyo.IO)</h1>
+
+                    <a id="participant_vidyo" target="_blank">
+                        <span class="highlight"> First participant </span>
+                    </a>
+                    <p></p>
+                    <a id="second_participant_vidyo" target="_blank">
+                        <span class="highlight"> Second participant </span>
+                    </a>
+                    <p>
+                        Simple implementation of the API where two participants immediately connect to a conference. Using Vidyo.IO as the provider
+                        (i.e. world-wide SFU coverage, powered with scalable video coding, hosted by Vidyo.IO). Point-to-point
+                        connections are
+                        <b>not</b> supported.
+                    </p>
+                    <p class="align-right">
+                        <a href="#basic-conference-vidyo-link" class="code-snippet-pointer">Basic Conference - Vidyo (Code 3.1)</a>
+                    </p>
+                </section>
+                <!-- Basic Conference vidyo ends here -->
+
+                <!-- Device selection vidyo starts here -->
+                <a id="device-selection-vidyo"></a>
+                <section class="simple-notes">
+                    <h1>Test page for device selection (Vidyo.IO)</h1>
+
+                    <a id="device1_vidyo" target="_blank">
+                        <span class="highlight"> User about to join a simple conference </span>
+                    </a>
+                    <p></p>
+                    <a id="device2_vidyo" target="_blank">
+                        <span class="highlight"> Second user about to join a simple conference </span>
+                    </a>
+                    <p>
+                        Example implementation of device selection. Redirection to conference with selected devices is not yet implemented in this
+                        example.
+                    </p>
+                    <p class="align-right">
+                        <a href="#device-selection-vidyo-link" class="code-snippet-pointer">Vidyo - Device Selection (Code 3.2)</a>
+                    </p>
+                </section>
+                <!-- Device selection vidyo ends here -->
+
+            </div>
+            <!-- end:Content section -->
 
             <!-- All Code comes here -->
-            <div class="col-1-of-4 code-section">                
+            <div class="col-1-of-4 code-section">
                 <!-- Code snippet section 1.0-->
                 <a id="code-snippet-pointer"></a>
                 <section class="code-snippet-section">
                     <h1>npm commands (code 1.0)</h1>
                     <pre>
+<code>
 npm start
 npm run compile
 npm run build-fm
+</code>
                     </pre>
                 </section>
                 <!-- Unit testing code snippet section 1.1 -->
@@ -126,12 +395,222 @@ npm run build-fm
                 <section class="code-snippet-section">
                     <h1>Unit testing npm command (Code 1.1)</h1>
                     <pre>
+<code>
 npm test
 karma
+</code>
                     </pre>
-                </section>                
-            </div><!--end:All Code comes here -->            
-        </div><!-- end:row -->
-    </div><!-- end:page -->
+                </section>
+                <!-- Code snippet for philips basic conference -->
+                <a id="philips-conference-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Basic Conference (Code 2.1)</h1>
+                    <pre>
+<code>    
+//Creating a Philips Instance using FM provider                    
+var philipsClient = new Philips.PhilipsRtcClient(token, "FM_TURN_HD");
+philipsClient.connect().then(function () {
+    var conference = philipsClient.createConference(conferenceDiv, confId);
+    conference.join().then(function () {
+        console.log('successfully joined conference');
+    });
+});
+</code>
+                    </pre>
+                </section>
+                <!-- Code snippet for philips basic conference ends -->
+                <!-- Code snippet for twilio basic conference starts -->
+                <a id="twilio-conference-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Twilio Conference (Code 2.2)</h1>
+                    <pre>
+<code>
+var philipsClient = new Philips.PhilipsRtcClient(token, "TWILIO_TURN_HD");
+philipsClient.connect().then(function () {
+    var conference = philipsClient.createConference(conferenceDiv, confId);
+    conference.join().then(function () {
+        console.log('successfully joined conference');
+    });
+});
+</code>
+                     </pre>
+                </section>
+                <!-- Code snippet for twilio basic conference ends -->
+                <!-- Code snippet for basic conference chat starts -->
+                <a id="chat-conference-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Send Chat Message (Code 2.3)</h1>
+                    <pre>
+philipsClient.setBoundRecord("displayName", `test ${Math.random() * 10}`);
+var message = chatInput.value;
+conference.sendChatMessage("chat", message);
+chatOutputDiv.innerHTML += 'you: ' + chatInput.value + '<br>';
+                      </pre>
+                </section>
+                <!-- Code snippet for basic conference chat ends -->
+                <!-- Code snippet for conference presence tracker starts -->
+                <a id="presence-tracker-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Conference Presence Tracker (Code 2.4)</h1>
+                    <pre>
+philipsClient.onPresenceChange = (presenceChangeArgs) => {
+    var content;
+    var channelPresenceDiv = document.getElementById("trackerDiv");
+    var p = presenceChangeArgs.present ? ': online' : ': offline';
+    if (presenceChangeArgs.type === Philips.PresenceChangeType.CONFERENCE_PRESENCE) {
+        content = " CONF:" + presenceChangeArgs.conferenceId + p + " for " + presenceChangeArgs.userId;
+    }
+    else (presenceChangeArgs.type === Philips.PresenceChangeType.CLIENT_PRESENCE) {
+        content = " USER:" + presenceChangeArgs.conferenceId + p + " for " + presenceChangeArgs.userId;
+    }
+});
+                      </pre>
+                </section>
+                <!-- Code snippet for conference presence tracker ends -->
+                <!-- Code snippet for direct call starts -->
+                <a id="direct-call-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Direct Call (Code 2.5)</h1>
+                    <pre>
+philipsClient.registerForUserPresenceChange('TestUserId1');
+patientpresenceDiv.onclick = function () {
+    if (conference.getHasJoined()) {
+        conference.leave()
+            .then(() => {
+            conference.call("TestUserId1");
+        });
+    }
+};
+                      </pre>
+                </section>
+                <!-- Code snippet for direct call ends -->
+                <!-- Code snippet for bound record starts -->
+                <a id="bound-record-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Custom Bound Records (Code 2.6)</h1>
+                    <pre>
+// Render local participant displayname (set with setBoundRecord() above).
+thisParticipantDisplayName = conference.getLocalParticipant().getBoundRecord('displayname');
+listDiv.innerHTML = 'This participant\'s displayName is "' + thisParticipantDisplayName + '"!<br>';
+                      </pre>
+                </section>
+                <!-- Code snippet for bound record ends -->
+                <!-- Code snippet for device selection starts -->
+                <a id="device-selection-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Device Selection (Code 2.7)</h1>
+                    <pre>
+conference.listMediaDevices().then((deviceList) {
+    console.log('Device List is: ', deviceList);
+});
+                      </pre>
+                </section>
+                <!-- Code snippet for device selection ends -->
+                <!-- Code snippet for basic conference vidyo starts -->
+                <a id="basic-conference-vidyo-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Basic Conference - Vidyo (Code 3.1)</h1>
+                    <pre>
+var philipsClient = new PhilipsRtcClient(token, "VIDYO_IO");
+var conference = philipsClient.createConference(conferenceDiv, confId);
+conference.join().then(function () {
+    console.log('successfully joined conference');
+});
+                       </pre>
+                </section>
+                <!-- Code snippet for basic conference vidyo ends -->
+                <!-- Code snippet for device selection vidyo starts -->
+                <a id="device-selection-vidyo-link"></a>
+                <section class="code-snippet-section">
+                    <h1>Vidyo - Device Selection (Code 3.2)</h1>
+                    <pre>
+var philipsClient = new PhilipsRtcClient(token, "VIDYO_IO");
+conference.listMediaDevices().then((deviceList) {});
+                       </pre>
+                </section>
+                <!-- Code snippet for device selection vidyo ends -->
+            </div>
+            <!--end:All Code comes here -->
+        </div>
+        <!-- end:row -->
+    </div>
+    <!-- end:page -->     
+       <!-- Javascript for identifying the code tag and highlighting the comments within it -->
+       <script>
+           (function(){
+                var codeTags = document.getElementsByTagName('code');
+                // console.log('Code tags are: ', codeTags);
+                var codeArray = [].slice.call(codeTags);
+                codeArray.forEach(function(element, index){
+                    // console.log('Element number is: ', index);
+
+                    // console.log('Element text content is :', element.textContent?element.textContent:'null');
+                    var textArea = element.textContent?element.textContent:false;
+                    // element.style.backgroundColor = 'grey';
+                    // element.style.color = 'white';
+                    if(textArea){
+                        var lines = textArea.split('\n');
+                        // console.log('Number of lines is: ', lines);
+                        lines.forEach(function(singleLine,index){
+                            if(singleLine.substring(0,2) == '//'){
+                                lines[index] = singleLine.fontcolor("blue");
+                                console.log('Line contains comment: ', singleLine);                                
+                            }   
+                        });
+                        textArea = lines.join('\n');
+                        element.innerHTML = textArea;
+                    }//end:if
+                });
+           }());//end:IIFE
+       </script>
 </body>
+<script>
+    function updateLinks() {
+        var confId = document.getElementById('conferenceId').value;
+        var token = document.getElementById('token').value;
+
+        // FM
+        document.getElementById("participant").setAttribute("href", 'joinedpatient.html?confId=' + confId + '&token=' +
+            token);
+        document.getElementById("second_participant").setAttribute("href", 'joinedpatient.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("participant_twilio").setAttribute("href", 'joinedpatienttwilio.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("second_participant_twilio").setAttribute("href", 'joinedpatienttwilio.html?confId=' +
+            confId + '&token=' + token);
+        document.getElementById("chat_participant").setAttribute("href", 'joinedpatientchat.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("second_chat_participant").setAttribute("href", 'joinedpatientchat.html?confId=' +
+            confId + '&token=' + token);
+        document.getElementById("tracking_participant").setAttribute("href", 'conferencetracker.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("tracked_participant").setAttribute("href", 'joinedpatient.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("caregiver").setAttribute("href", 'caregiver.html?confId=' + confId + '&token=' + token);
+        document.getElementById("waitingpatient").setAttribute("href", 'waitingpatient.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("bound_records_participant1").setAttribute("href", 'boundrecords.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("bound_records_participant2").setAttribute("href", 'boundrecords.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("device1").setAttribute("href", 'deviceselection.html?confId=' + confId + '&token=' +
+            token);
+        document.getElementById("device2").setAttribute("href", 'deviceselection.html?confId=' + confId + '&token=' +
+            token);
+
+        // vidyo
+        document.getElementById("participant_vidyo").setAttribute("href", 'joinedpatientvidyo.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("second_participant_vidyo").setAttribute("href", 'joinedpatientvidyo.html?confId=' +
+            confId + '&token=' + token);
+        document.getElementById("device1_vidyo").setAttribute("href", 'deviceselection_vidyo.html?confId=' + confId +
+            '&token=' + token);
+        document.getElementById("device2_vidyo").setAttribute("href", 'deviceselection_vidyo.html?confId=' + confId +
+            '&token=' + token);
+    }
+
+    document.getElementById('conferenceId').value = 'C' + Math.floor((Math.random() * 1000000)).toString();
+    updateLinks();
+</script>
+
 </html>
